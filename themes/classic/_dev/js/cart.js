@@ -58,7 +58,7 @@ $(document).ready(() => {
   function findCartLineProductQuantityInput($target) {
     var $input = $target.parents('.bootstrap-touchspin').find(productLineInCartSelector);
 
-    if ($input.is(':focus')) {
+    if ($input.is(':focus') || !$input.length) {
       return null;
     }
 
